@@ -53,12 +53,9 @@ public class Smartphone extends Prodotto {
 	{
 		
 		return 	"\nCategoria: "		+ "Smartphone"		+
-				"\nCOD: " 			+ getCodice() 		+
-				"\nProdotto: " 		+ getNome() 		+
-				"\nMarca: " 		+ getMarca() 		+
+				super.toString()						+
 				"\nMemoria: "		+ memoria			+
-				"\nC.IMEI: "		+ imei				+
-				"\nPrezzo: " 		+ getPrezzo()		;
+				"\nC.IMEI: "		+ imei				;
 		
 	}
 }
