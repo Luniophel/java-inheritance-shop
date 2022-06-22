@@ -22,8 +22,7 @@ public class Smartphone extends Prodotto {
 				"-"				+
 				generaImei(6)	+
 				"-"				+
-				generaImei(1)	+
-				"-"				;
+				generaImei(1)	;
 		
 	}
 
@@ -41,7 +40,7 @@ public class Smartphone extends Prodotto {
 	{
 		
 		String cifraImei = "";
-		for (int i=0; i<=slots; i++) 
+		for (int i=0; i<slots; i++) 
 		{
 			cifraImei+=fCifra();
 		}
@@ -50,10 +49,16 @@ public class Smartphone extends Prodotto {
 	}
 	
 	@Override
-	public String toString() 
+	public String toString() 				//Metodo che ritorna una stringa con i dati del prodotto
 	{
 		
-		return "\nCOD:" + getCodice() + "\nProdotto: " + getNome() + "\nMarca: " + getMarca() + "\nPrezzo: " + getPrezzo();
+		return 	"\nCategoria: "		+ "Smartphone"		+
+				"\nCOD: " 			+ getCodice() 		+
+				"\nProdotto: " 		+ getNome() 		+
+				"\nMarca: " 		+ getMarca() 		+
+				"\nMemoria: "		+ memoria			+
+				"\nC.IMEI: "		+ imei				+
+				"\nPrezzo: " 		+ getPrezzo()		;
 		
 	}
 }

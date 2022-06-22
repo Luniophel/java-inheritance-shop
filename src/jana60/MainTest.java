@@ -8,6 +8,8 @@ public class MainTest {
 		Prodotto p1 = new Prodotto("1969", "Samsung Galaxy S1", "Samsung", 800.00, 23);
 		Smartphone samsungGalaxy = new Smartphone(p1, 50);
 		System.out.println(samsungGalaxy.toString());
+		
+		
 	}
 
 }
