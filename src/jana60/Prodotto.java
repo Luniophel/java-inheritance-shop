@@ -11,7 +11,7 @@ public class Prodotto {
 	private int iva = 22;
 	
 	//Imports
-	DecimalFormat df = new DecimalFormat("0.00€");
+	DecimalFormat dfEur = new DecimalFormat("0.00€");
 	
 	//Costruttori
 	public Prodotto(String codice, String nome, String marca, double prezzo) {
@@ -22,36 +22,44 @@ public class Prodotto {
 		this.prezzo = prezzo;
 		
 	}
-	public Prodotto(Prodotto prodotto) {
+	public Prodotto(Prodotto prodotto) 
+	{
 		this(prodotto.getCodice(), prodotto.getNome(), prodotto.getMarca(), prodotto.getPrezzo());
 	}
 	
 	//Getter Setter
-	public String getCodice() {
+	public String getCodice() 
+	{
 		return codice;
 	}
 
-	public String getNome() {
+	public String getNome() 
+	{
 		return nome;
 	}
 
-	public void setNome(String nome) {
+	public void setNome(String nome) 
+	{
 		this.nome = nome;
 	}
 
-	public String getMarca() {
+	public String getMarca() 
+	{
 		return marca;
 	}
 
-	public void setMarca(String marca) {
+	public void setMarca(String marca) 
+	{
 		this.marca = marca;
 	}
 
-	public double getPrezzo() {
+	public double getPrezzo() 
+	{
 		return prezzo;
 	}
 
-	public void setPrezzo(double prezzo) {
+	public void setPrezzo(double prezzo) 
+	{
 		this.prezzo = prezzo;
 	}
 
@@ -59,29 +67,33 @@ public class Prodotto {
 		return iva;
 	}
 
-	public void setIva(int iva) {
+	public void setIva(int iva) 
+	{
 		this.iva = iva;
 	}
 	
-	//Metodi
-	public String calcPrezzoIva() {
-		
+	//METODI
+	public String calcPrezzoIvaEur() 		//Metodo che ritorna il prezzo ivato in formato Europeo
+	{
 		double prezzoIva = prezzo + (prezzo * (iva / 100.00));
-		return df.format(prezzoIva);
-		
+		return dfEur.format(prezzoIva);	
+	}
+	
+	public String fPrezzoEur() 				//Metodo che ritorna il prezzo in formato Europeo
+	{
+		return dfEur.format(prezzo);
 	}
 	
 	@Override
 	public String toString() 				//Metodo che ritorna una stringa con i dati del prodotto
 	{
-		
 		return	"\nCOD: " 			+ codice 			+
 				"\nProdotto: " 		+ nome				+
 				"\nMarca: " 		+ marca 			+
-				"\nPrezzo: " 		+ df.format(prezzo)	+
+				"\nPrezzo: " 		+ fPrezzoEur()		+
 				"\nIVA: "			+ iva + "%"			+
 				"\n"									+
-				"Prezzo+IVA: "		+ calcPrezzoIva()	;
+				"Prezzo+IVA: "		+ calcPrezzoIvaEur();
 	}
 
 	

@@ -8,6 +8,7 @@ public class Smartphone extends Prodotto {
 	String imei;
 	int memoria;
 	
+	//Imports
 	Random random = new Random();
 	
 	//Costruttori
