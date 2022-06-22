@@ -31,7 +31,7 @@ public class Televisori extends Prodotto {
 	public String toString() 				//Metodo che ritorna una stringa con i dati del prodotto
 	{
 		
-		return 	"\nCategoria: "		+ "Smartphone"					+
+		return 	"\nCategoria: "		+ "Televisore"					+
 				super.toString()									+
 				"\nFunzioni Smart: "+ isSmart()						+
 				"\nDimensioni: "	+ dimensioni 		+ " pollici";
