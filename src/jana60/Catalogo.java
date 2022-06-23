@@ -44,7 +44,7 @@ public class Catalogo {
 			Prodotto tempProdotto = new Prodotto(tempCodice, tempNome, tempMarca, tempPrezzo);
 			
 			
-			boolean continuaMain = true;
+			boolean continua = true;
 			do {
 				//Intesimento dati caratterizzanti del prodotto
 				switch (scelta) 
@@ -58,7 +58,7 @@ public class Catalogo {
 
 					case 2: //Caso Televisore
 						boolean tempSmart = false;
-						boolean continua = true;
+						continua = true;
 						do 
 						{
 							System.out.println("è smart? ");
@@ -92,7 +92,7 @@ public class Catalogo {
 						System.out.print("Colore: ");
 						String tempColore = scan.nextLine();
 						boolean tempWireless = false;
-						boolean continua2 = true;
+						continua = true;
 						do 
 						{
 							System.out.println("è wireless?");
@@ -102,31 +102,31 @@ public class Catalogo {
 							{
 								case "1":
 									tempWireless = true;
-									continua2 = true;
+									continua = true;
 									break;
 									
 								case "2":
 									tempWireless = false;
-									continua2 = true;
+									continua = true;
 									break;
 									
 								default:
 									System.out.println("Risposta non valida, ritenta.");
-									continua2 = false;
+									continua = false;
 									break;
 							}
 						} 
-						while (continua2 == false);
+						while (continua == false);
 						catalogo[i] = new Cuffie(tempProdotto, tempColore, tempWireless);
 						break;
 
 				default: //Caso di inserimento non valido
 					System.out.println("Scelta non valida, ritenta.");
-					continuaMain = false;
+					continua = false;
 
 				}
 			} 
-			while (continuaMain == false);
+			while (continua == false);
 			
 			i++;
 		}
