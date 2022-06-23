@@ -15,7 +15,7 @@ public class Televisori extends Prodotto {
 	}
 	
 	//Metodi
-	String isSmart () 						//Metodo che ritorna una stringa con SI se il prodotto è SMART, NO se non lo è.
+	private String isSmart () 						//Metodo che ritorna una stringa con SI se il prodotto è SMART, NO se non lo è.
 	{
 		if (smart)
 		{

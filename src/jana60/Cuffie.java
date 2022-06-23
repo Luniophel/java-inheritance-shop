@@ -15,7 +15,7 @@ public class Cuffie extends Prodotto {
 }
 
 	//Metodi
-	String isWireless()						//Metodo che ritorna una stringa con SI se il prodotto è Wireless, altrimenti ritorna NO.
+	private String isWireless()						//Metodo che ritorna una stringa con SI se il prodotto è Wireless, altrimenti ritorna NO.
 	{
 		if(wireless)
 		{

@@ -73,13 +73,13 @@ public class Prodotto {
 	}
 	
 	//METODI
-	public String calcPrezzoIvaEur() 		//Metodo che ritorna il prezzo ivato in formato Europeo
+	private String calcPrezzoIvaEur() 		//Metodo che ritorna il prezzo ivato in formato Europeo
 	{
 		double prezzoIva = prezzo + (prezzo * (iva / 100.00));
 		return dfEur.format(prezzoIva);	
 	}
 	
-	public String fPrezzoEur() 				//Metodo che ritorna il prezzo in formato Europeo
+	private String fPrezzoEur() 				//Metodo che ritorna il prezzo in formato Europeo
 	{
 		return dfEur.format(prezzo);
 	}
